@@ -25,3 +25,11 @@ $georgia: Georgia, serif;
     @content;
   }
 }
+
+@import "bootstrap/variables";
+
+$body-bg: $gray-dark;
+
+$navbar-margin-bottom: 0;
+$navbar-default-toggle-border-color: 0;
+

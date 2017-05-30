@@ -1,51 +1,47 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
-    {% include meta.html %}
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
-
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
+---
+layout: base
+---
+<nav class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="glyphicon glyphicon-th"></span>
+      </button>
+      <a href="/"><img class="center-block" style="padding-right:50px" src="{{ site.image-server-url }}/img/nav-spira.svg" alt="[ SPIRA ]"></a>
     </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
+    <div id="navbar" class="navbar-collapse collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/trips-toc/"><span class="glyphicon glyphicon-globe"></span>&nbsp; Voyages</a>
+        </li>
+        <li>
+          <a href="/pictures-toc/"><span class="glyphicon glyphicon-camera"></span>&nbsp; Photos</a>
+        </li>
+        <li>
+          <a href="/drawings-toc/"><span class="glyphicon glyphicon-pencil"></span>&nbsp; Dessins</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"></a></li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+{{ content }}
 
-    {% include analytics.html %}
-  </body>
-</html>
+<footer class="bs-docs-footer">
+  <ul class="bs-docs-footer-links muted">
+    <li>&copy; Spira 2014 - 2017</li>
+  </ul>
+</footer>
+
+{% include analytics.html %}
+
+<script src="{{ site.baseurl }}/js/jquery-3.2.1.min.js"></script>
+<script src="{{ site.baseurl }}/js/bootstrap.js"></script>
+<script src="{{ site.baseurl }}/js/sidetoc.js"></script>
+<script>
+$(".nav-wrapper").height($(".nav").height());
+</script>

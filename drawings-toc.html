@@ -1,0 +1,23 @@
+---
+title: Quelques dessins
+layout: toc
+---
+<table class="table">
+  <tbody>
+    {% assign trips = site.pages | where: "resource","true" | where_exp: "item","item.categories contains 'drawing'" | sort: 'order' | reverse %}
+    {% for page in trips %}
+            <tr>
+              <td>
+                <a href="{{ page.url }}">
+                  <img src="{{ site.image-server-url }}/img/{{ page.url }}/thumbnail.jpg" class="img-responsive">
+                </a>
+              </td>
+              <td>
+                <p><strong>{{ page.date }}</strong></p>
+                <p><a href="{{ page.url }}">{{ page.title }}</a></p>
+                <p>{{ page.desc  }}</p>
+              </td>
+            </tr>
+    {% endfor %}  <!-- page -->
+  </tbody>
+</table>

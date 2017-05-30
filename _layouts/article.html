@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+{% include fb-root.html %}
+
+<div id="main" role="main" class="container main-container mt-2">
+  <div class="row pl-2 pr-2 ml-0 mr-0 bg-blue" style="background-image:url({{ site.image-server-url }}/img/{{ page.url }}/background.jpg);background-color: #0150bd;background-repeat: no-repeat;background-position: center">
+    <div class="col-md-12 bs-docs-header" id="header">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.date | date: "%B %e, %Y" }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <!-- Article Content -->
+    <div class="col-md-offset-1 col-md-7" role="main" id="article-content">
+        {{ content }}
+    </div>
+    <!-- end of Article Content -->
+
+    <!-- Right-sided Table of Content -->
+    <div class="col-md-4" role="complementary">
+      <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" data-spy="affix" data-offset-top="300" data-offset-bottom="0" id="navScrollSpy">
+        <ul class="nav bs-docs-sidenav" id="article-sidetoc">
+
+        </ul>
+        <a class="back-to-top" href="#top"><span class="glyphicon glyphicon-circle-arrow-up"></span>&nbsp; back to top</a>
+      </nav>
+    </div>
+  </div>
+  <!-- end of Right-Sided Table of Content -->
+
+  <div class="row mt-1 ml-2 mr-2">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          {% include fb-like-share.html %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          {% include fb-comments.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

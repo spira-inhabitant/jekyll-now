@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/default.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="http://getbootstrap.com/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="{{ site.image-server-url }}/img/icon.ico">
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body  data-spy="scroll" data-target="#navScrollSpy" data-offset="80">
+    {{ content }}
+  </body>
+</html>

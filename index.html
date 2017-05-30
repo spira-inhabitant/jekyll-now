@@ -1,18 +1,49 @@
 ---
-layout: default
+layout: base
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<style>
+.vertical-align {
+  min-height: 100%;
+  min-height: 100vh;
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+  display: flex;
+  align-items: center;
+}
 
-      <div class="entry">
-        {{ post.excerpt }}
+.horizontal-align {
+  min-width: 100%;
+
+  align-items: center;
+}
+
+.white-links {
+  color: white;
+  font-size: 200%;
+}
+
+.white-links:hover {
+  color: grey;
+}
+
+body {
+  background-color:black;
+  padding-top: 0;
+}
+</style>
+
+<div class="vertical-align">
+  <div class="row horizontal-align">
+    <div class="col-md-12 center-block text-center">
+        <img src="{{ site.image-server-url }}/img/spira.png" class="img-responsive center-block" alt="SPIRA"/>
+      <div class="row">
+        <h2></h2>
       </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+      <a href="/trips-toc/" class="white-links"><span class="glyphicon glyphicon-globe"></span></a>
+      &nbsp;&nbsp;
+      <a href="/pictures-toc/" class="white-links"><span class="glyphicon glyphicon-camera"></span></a>
+      &nbsp;&nbsp;
+      <a href="/drawings-toc/" class="white-links"><span class="glyphicon glyphicon-pencil"></span></a>
+    </div>
+  </div>
 </div>
