@@ -24,7 +24,11 @@ layout: default
         <ul class="nav bs-docs-sidenav" id="article-sidetoc">
 
         </ul>
-        <a class="back-to-top" href="#top"><span class="glyphicon glyphicon-circle-arrow-up"></span>&nbsp; back to top</a>
+        <ul class="back-to-top">
+          <a href="#top" data-toggle="tooltip" data-placement="top" title="retour en haut"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+          <a href="#comment" data-toggle="tooltip" data-placement="top" title="laisser un commentaire"><span class="glyphicon glyphicon-comment"></span></a>
+          <a href="#comment" data-toggle="tooltip" data-placement="top" title="rapporter des erreurs"><span class="glyphicon glyphicon-ok"></span></a>
+        </ul>
       </nav>
     </div>
   </div>
@@ -37,7 +41,7 @@ layout: default
           {% include fb-like-share.html %}
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="comment">
         <div class="col-md-12">
           {% include fb-comments.html %}
         </div>

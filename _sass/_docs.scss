@@ -422,16 +422,20 @@ body {
     padding-left: 28px;
     font-weight: 500;
 }
-.back-to-top, .bs-docs-theme-toggle {
+.back-to-top {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.back-to-top>a, .bs-docs-theme-toggle {
     display: none;
-    padding: 4px 10px;
+    margin-right: 10px;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 0px;
     font-size: 12px;
     font-weight: 500;
     color: #999;
 }
-.back-to-top:hover, .bs-docs-theme-toggle:hover {
+.back-to-top>a:hover, .bs-docs-theme-toggle:hover {
     color: #0150bd;
     text-decoration: none;
 }
@@ -439,8 +443,8 @@ body {
     margin-top: 0;
 }
 @media (min-width:768px) {
-    .back-to-top, .bs-docs-theme-toggle {
-    display: block;
+    .back-to-top>a, .bs-docs-theme-toggle {
+    display: inline;
 }
 }@media (min-width:992px) {
     .bs-docs-sidebar .nav>.active>ul {
@@ -772,13 +776,6 @@ h1[id] {
 }
 .bs-example-tabs .nav-tabs {
     margin-bottom: 15px;
-}
-.bs-example-tooltips {
-    text-align: center;
-}
-.bs-example-tooltips>.btn {
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 .bs-example-popover {
     padding-bottom: 24px;
